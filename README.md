@@ -73,7 +73,7 @@ The requirements are as follows (version numbers are not exclusive but are the o
 This environment is a python wrapper for a Mathematica environment. If you would like to use the 
 Mathematica library directly use `GymOpticalTables.m` (which depends on `OpticalElements.m`) as Mathematica package.
 You find these files in `./gym_optical_tables/libraries/`.
-Then, you can use `GymOpticalTables.m` in the same way as (`SimulatedCartPole`)[https://reference.wolfram.com/language/ref/device/SimulatedCartPole.html].
+Then, you can use `GymOpticalTables.m` in the same way as [`SimulatedCartPole`](https://reference.wolfram.com/language/ref/device/SimulatedCartPole.html).
 
 ## To-Do
 
