@@ -1,4 +1,4 @@
-# Quantum Network Routing Environment for Reinforcement Learning
+# Optical quantum experiment environment for reinforcement learning
 
 An *OpenAI* `gym` environment where an reinforcement learning (RL) agent acts on 
 an optical table setup to create high-dimensional multipartite entanglement in 

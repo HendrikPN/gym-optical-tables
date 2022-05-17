@@ -1,3 +1,4 @@
+import platform
 import gym
 from gym import spaces
 
@@ -91,9 +92,12 @@ class OpticalTablesEnv(gym.Env):
 							'\"EpisodeLength\" -> %i}'  % (self.episode_length))
 
 		# Get drivers in WolframLanguageSession
-		driver_file_path = resources.path(gym_optical_tables.libraries, "GymOpticalTables.m")
+		with resources.path(gym_optical_tables.libraries, "GymOpticalTables.m") as p:
+			driver_file_path = p
+		if platform.system() == "Windows":
+			driver_file_path = driver_file_path.as_posix()
 		self.session.evaluate(
-							  wlexpr(f'Get["{driver_file_path.as_posix()}"]')
+							  wlexpr(f'Get["{driver_file_path}"]')
 							  )
 
 		# Start environment within WolframLanguageSession
